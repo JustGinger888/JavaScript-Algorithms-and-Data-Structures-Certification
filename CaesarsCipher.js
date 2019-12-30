@@ -26,12 +26,9 @@ function conversion(str){
     }
 
     var convertedASCII = String.fromCharCode(initialASCII);
+    return convertedASCII; 
 }
-
-let rx = /[A-Za-z]/;
-var str = "Z";
-var convertedASCII = String.fromCharCode(initialASCII)
-console.log(str.charCodeAt());
 
 // Change the inputs below to test
 rot13("LBH QVQ VG");
+console.log();

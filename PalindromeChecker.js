@@ -1,5 +1,5 @@
 function palindrome(str) {
-  str.replace(/\W/gi, '');
+  str.replace(/\W/gi, '').toUpperCase();
   return true;
 }
 

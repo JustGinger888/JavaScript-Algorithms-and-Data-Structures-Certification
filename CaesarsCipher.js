@@ -1,6 +1,7 @@
 function rot13(str) { // LBH QVQ VG!
   var splitString = str.split(""); 
   var optArr = [];
+  let rx = /[A-Za-z]/;
   
   for (var i = 0; i < splitString.length; i++){
       if(rx.test(splitString[i])){
@@ -11,14 +12,14 @@ function rot13(str) { // LBH QVQ VG!
       }
   }
 
-  var output = optArr.join();
+  var output = optArr.join("");
   return output;
 }
 
 function conversion(str){
     var initialASCII = str.charCodeAt(0);
     
-    for(var i = 0; i <= 13; i++){
+    for(var i = 0; i < 13; i++){
       initialASCII++;
       if(initialASCII == 91){
         initialASCII = 65;
@@ -30,5 +31,5 @@ function conversion(str){
 }
 
 // Change the inputs below to test
-rot13("LBH QVQ VG");
-console.log();
+rot13("SERR PBQR PNZC");
+console.log(rot13("LBH QVQ VG!"));

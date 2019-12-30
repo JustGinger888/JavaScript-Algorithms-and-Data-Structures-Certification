@@ -1,5 +1,18 @@
 function convertToRoman(num) {
- return num;
+ var opt = [];
+ var tblCheck = eqvArr.length - 1; 
+
+ do{
+     if (num - eqvArr[tblCheck][0] > 0){
+        opt.push(eqvArr[tblCheck[1]])
+     }
+     else{
+         tblCheck--;
+     }
+
+ }while(num > 0);
+ 
+ return opt;
 }
 
 const eqvArr= [[1,"I"], [4,"IV"], 

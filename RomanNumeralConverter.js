@@ -4,7 +4,8 @@ function convertToRoman(num) {
 
  do{
      if (num - eqvArr[tblCheck][0] > 0){
-        opt.push(eqvArr[tblCheck[1]])
+        opt.push(eqvArr[tblCheck][1]);
+        break;
      }
      else{
          tblCheck--;

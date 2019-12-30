@@ -1,6 +1,6 @@
 function palindrome(str) {
   //Initialise Variables
-  var initialString = str.replace(/\W/gi, '').toUpperCase();
+  var initialString = str.replace(/[^A-Za-z0-9]/gi, '').toUpperCase();
   var comparisonString = reverseString(initialString);
   
   //Comparison Function between Strings
@@ -32,3 +32,6 @@ function compareStrings(str,cmp){
 
 
 palindrome("eye");
+palindrome("0_0 (: /-\ :) 0-0");
+palindrome("My age is 0, 0 si ega ym.");
+palindrome("five|\_/|four");

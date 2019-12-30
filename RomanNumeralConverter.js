@@ -1,11 +1,12 @@
 function convertToRoman(num) {
- var opt = [];
+ var optArr = [];
  var tblCheck = eqvArr.length - 1; 
 
  do{
-     if (num - eqvArr[tblCheck][0] > 0){
-        opt.push(eqvArr[tblCheck][1]);
-        break;
+     if (num - eqvArr[tblCheck][0] >= 0){
+        num = num - eqvArr[tblCheck][0];
+        optArr.push(eqvArr[tblCheck][1]);
+        //break;
      }
      else{
          tblCheck--;
@@ -13,19 +14,14 @@ function convertToRoman(num) {
 
  }while(num > 0);
  
- return opt;
+ var output = optArr.join("");
+ return output;
 }
 
-const eqvArr= [[1,"I"], [4,"IV"], 
-               [5,"V"], [9,"IX"], 
-               [10,"X"], [40,"XL"], 
-               [50,"L"], [90,"XC"], 
-               [100,"C"], [400,"CD"], 
-               [500,"D"], [900,"CM"], 
-               [1000,"M"]];
+const eqvArr= [[1,"I"], [4,"IV"], [5,"V"], [9,"IX"], [10,"X"], [40,"XL"], [50,"L"], 
+               [90,"XC"], [100,"C"], [400,"CD"], [500,"D"], [900,"CM"], [1000,"M"]];
 
-convertToRoman(36);
-console.log(eqvArr[1,1]);
+console.log(convertToRoman(14));
 
 /*------------------------------------Decimal Table--------------------------------------
 Decimal value (v)	 | Roman numeral (n)

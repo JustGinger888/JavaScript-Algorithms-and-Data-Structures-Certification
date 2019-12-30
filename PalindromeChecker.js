@@ -3,11 +3,11 @@ function palindrome(str) {
   var initialString = str.replace(/\W/gi, '').toUpperCase();
   var comparisonString = reverseString(initialString);
   
-  //Comparison Function to be Added
-  if(){
-
+  //Comparison Function between Strings
+  if(compareStrings(initialString,comparisonString)){
+      return true;
   }
-  return true;
+  return false;
 }
 
      
@@ -22,9 +22,13 @@ function reverseString(str) {
     //--------------------------------------------------------------------------------------
     return joinArray;
 }
+  
+function compareStrings(str,cmp){
+    if(str === cmp){
+      return true;
+    }
+    return false;
+}
 
 
 palindrome("eye");
-let p = "eye12";
-let rx = /\W/g;
-console.log(p.replace(/\W/gi, '').toUpperCase());

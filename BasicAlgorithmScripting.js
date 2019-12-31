@@ -1,4 +1,4 @@
-//------------------------------------Convert Celsius to Fahrenheit
+//--------------------------------------------------Convert Celsius to Fahrenheit
 function convertToF(celsius) {
   var fahrenheit = celsius * (9 / 5) + 32;
   if (typeof fahrenheit !== "undefined") {
@@ -8,12 +8,14 @@ function convertToF(celsius) {
   }
 }
 
-//------------------------------------Reverse a String
+
+//--------------------------------------------------Reverse a String
 function reverseString(str) {
   return str.split("").reverse().join("");
 }
 
-//------------------------------------Factorialize a Number
+
+//--------------------------------------------------Factorialize a Number
 function factorialize(num) {
   if (num === 0) {
     return 1;
@@ -21,7 +23,8 @@ function factorialize(num) {
   return num * factorialize(num - 1);
 }
 
-//------------------------------------Find the Longest Word in a String
+
+//--------------------------------------------------Find the Longest Word in a String
 function findLongestWordLength(str) {
   var words = str.split(' ');
   var mxl = 0;
@@ -35,7 +38,8 @@ function findLongestWordLength(str) {
   return mxl;
 }
 
-//------------------------------------Return Largest Numbers in Arrays
+
+//--------------------------------------------------Return Largest Numbers in Arrays
 function largestOfFour(arr) {
   var results = [];
   
@@ -54,34 +58,53 @@ function largestOfFour(arr) {
   return results;
 }
 
-//------------------------------------Confirm the Ending
+
+//--------------------------------------------------Confirm the Ending
 function confirmEnding(str, target) {
   let rx = new RegExp(target + "$", "i");
   return rx.test(str);
 }
 
-//------------------------------------
+
+//--------------------------------------------------Repeat a String
+function repeatStringNumTimes(str, num) {
+  var acc = "";
+  
+  while (num > 0) {
+    acc += str;
+    num--;
+  }
+
+  return acc;
+}
 
 
 //------------------------------------
 
 
-//------------------------------------
-
 
 //------------------------------------
 
-
-//------------------------------------
 
 
 //------------------------------------
 
 
+
 //------------------------------------
 
 
+
 //------------------------------------
+
+
+
+//------------------------------------
+
+
+
+//------------------------------------
+
 
 
 //------------------------------------

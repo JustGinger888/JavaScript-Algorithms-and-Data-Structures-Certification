@@ -90,8 +90,10 @@ function truncateString(str, num) {
 }
 
 
-//------------------------------------
-
+//------------------------------------Finders Keepers
+function findElement(arr, func) {
+  return arr.find(func);
+}
 
 
 //------------------------------------

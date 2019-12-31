@@ -154,4 +154,11 @@ function mutation(arr) {
 }
 
 
-//------------------------------------
+//------------------------------------Chunky Monkey
+function chunkArrayInGroups(arr, size) {
+  var tstArr = [];
+  while (arr.length) {
+    tstArr.push(arr.splice(0, size));
+  }
+  return tstArr;
+}

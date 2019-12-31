@@ -102,8 +102,12 @@ function booWho(bool) {
 }
 
 
-//------------------------------------
-
+//------------------------------------Title Case a Sentence
+function titleCase(str) {
+  let rx = /(^|\s)\S/g
+  let l = L => L.toUpperCase();
+  return str.toLowerCase().replace(rx, l);
+}
 
 
 //------------------------------------

@@ -54,8 +54,11 @@ function largestOfFour(arr) {
   return results;
 }
 
-//------------------------------------
-
+//------------------------------------Confirm the Ending
+function confirmEnding(str, target) {
+  let rx = new RegExp(target + "$", "i");
+  return rx.test(str);
+}
 
 //------------------------------------
 

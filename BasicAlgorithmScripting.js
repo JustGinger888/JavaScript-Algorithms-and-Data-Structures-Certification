@@ -96,8 +96,10 @@ function findElement(arr, func) {
 }
 
 
-//------------------------------------
-
+//------------------------------------Boo who
+function booWho(bool) {
+  return typeof bool === "boolean";
+}
 
 
 //------------------------------------

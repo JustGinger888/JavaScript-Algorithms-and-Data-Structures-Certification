@@ -110,8 +110,15 @@ function titleCase(str) {
 }
 
 
-//------------------------------------
-
+//------------------------------------Slice and Splice
+function frankenSplice(arr1, arr2, n) {
+  let tstArr = arr2.slice();
+  for (let i = 0; i < arr1.length; i++) {
+    tstArr.splice(n, 0, arr1[i]);
+    n++;
+  }
+  return tstArr;
+}
 
 
 //------------------------------------

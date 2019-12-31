@@ -121,8 +121,10 @@ function frankenSplice(arr1, arr2, n) {
 }
 
 
-//------------------------------------
-
+//------------------------------------Falsy Bouncer
+function bouncer(arr) {
+  return arr.filter(Boolean);
+}
 
 
 //------------------------------------

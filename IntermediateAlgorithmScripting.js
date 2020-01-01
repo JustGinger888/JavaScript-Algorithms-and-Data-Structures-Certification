@@ -30,16 +30,39 @@ function inFirst(f, s, newArr) {
 }
 
 
-//-----------------------------------------------------
+//-----------------------------------------------------Spinal Tap Case
+function spinalCase(str) {
+  var rx = /\s+|_+/g;
+  str = str.replace(/([a-z])([A-Z])/g, "$1 $2");
+  return str.replace(rx, "-").toLowerCase();
+}
 
 
+//-----------------------------------------------------Pig Latin
+function translatePigLatin(str) {
+  var output;
+  if (str.match(/^[aeiou]/)){
+    return str + "way";
+  }
 
-//-----------------------------------------------------
+  const con = str.match(/^[^aeiou]+/)[0];
+  output = str.substring(con.length) + con + "ay";
+
+  return output;
+}
 
 
+//-----------------------------------------------------Search and Replace
+function myReplace(str, before, after) {
+  var index = str.indexOf(before);
+  
+  if (str[index] === str[index].toUpperCase()) {
+    after = after.charAt(0).toUpperCase() + after.slice(1);
+  }
 
-//-----------------------------------------------------
-
+  str = str.replace(before, after);
+  return str;
+}
 
 
 //-----------------------------------------------------

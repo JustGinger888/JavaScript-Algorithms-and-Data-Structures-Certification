@@ -12,8 +12,22 @@ function sumAll(arr) {
 }
 
 
-//-----------------------------------------------------
+//-----------------------------------------------------Diff Two Arrays
+function diffArray(arr1, arr2) {
+  var newArr = [];
+  newArr = inFirst(arr1, arr2, newArr);
+  newArr = inFirst(arr2, arr1, newArr);
+  return newArr;
+}
 
+function inFirst(f, s, newArr) {
+  for (var i = 0; i < f.length; i++) {
+    if (s.indexOf(f[i]) === -1) {
+      newArr.push(f[i]);
+    }
+  }
+  return newArr;
+}
 
 
 //-----------------------------------------------------

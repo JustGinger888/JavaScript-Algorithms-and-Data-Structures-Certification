@@ -38,7 +38,7 @@ function spinalCase(str) {
 }
 
 
-//-----------------------------------------------------Pig Latin
+//-----------------------------------------------------Pig Latin 
 function translatePigLatin(str) {
   var output;
   if (str.match(/^[aeiou]/)){

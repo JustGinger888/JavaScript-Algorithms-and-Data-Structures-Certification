@@ -65,8 +65,33 @@ function myReplace(str, before, after) {
 }
 
 
-//-----------------------------------------------------
+//-----------------------------------------------------DNA Pairing
+function pairElement(str) {
+  var pair = [];
 
+  for (var i = 0; i < str.length; i++) {
+    search(str[i], pair);
+  }
+
+  return pair;
+}
+
+function search(char, pair) {
+  switch (char) {
+    case "A":
+      pair.push(["A", "T"]);
+      break;
+    case "T":
+      pair.push(["T", "A"]);
+      break;
+    case "C":
+      pair.push(["C", "G"]);
+      break;
+    case "G":
+      pair.push(["G", "C"]);
+      break;
+  }
+}
 
 
 //-----------------------------------------------------

@@ -94,8 +94,18 @@ function search(char, pair) {
 }
 
 
-//-----------------------------------------------------
+//-----------------------------------------------------Missing letters
+function fearNotLetter(str) {
+  var otp;
+  
+  for (let i = 1; i < str.length; ++i) {
+    if (str.charCodeAt(i) - str.charCodeAt(i - 1) > 1) {
+      otp = String.fromCharCode(str.charCodeAt(i - 1) + 1);
+    }
+  }
 
+  return otp;
+}
 
 
 //-----------------------------------------------------

@@ -182,8 +182,31 @@ function sumFibs(num) {
 }
 
 
-//-----------------------------------------------------
+//-----------------------------------------------------Sum All Primes
+function sumPrimes(num) {
+  let i = 1;
+  let output = 0;
+  
+  while (i <= num) {
+    
+    if (primeNumber(i)) {
+      output += i;
+    }
 
+    i++;
+  }
+
+  return output;
+}
+
+function primeNumber(inp) {
+  for (let i = 2; i < inp; i++) {
+    if (inp % i === 0){
+      return false;
+    }
+  }
+  return inp !== 1 && inp !== 0;
+}
 
 
 //-----------------------------------------------------

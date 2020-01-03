@@ -209,8 +209,21 @@ function primeNumber(inp) {
 }
 
 
-//-----------------------------------------------------
+//-----------------------------------------------------Smallest Common Multiple
+function smallestCommons(arr) {
+  let max = Math.max(...arr);
+  let min = Math.min(...arr);
+  let output = max;
 
+  for (let i = max - 1; i >= min; i--) {
+    if (output % i) {
+      output += max;
+      i = max;
+    }
+  }
+
+  return output;
+}
 
 
 //-----------------------------------------------------

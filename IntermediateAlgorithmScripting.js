@@ -245,12 +245,20 @@ function steamrollArray(arr) {
 }
 
 
+//-----------------------------------------------------Binary Agents
+function binaryAgent(str) {
+  return str.split(' ').map(function(bi) {
+    return String.fromCharCode(parseInt(bi, 2)); 
+  }).join(''); 
+}
+
+
 //-----------------------------------------------------
-
-
-
-//-----------------------------------------------------
-
+function truthCheck(collection, pre) {
+  return collection.every(function (element) {
+    return element[pre];
+  });
+}
 
 
 //-----------------------------------------------------

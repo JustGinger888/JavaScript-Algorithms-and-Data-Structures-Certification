@@ -261,7 +261,21 @@ function truthCheck(collection, pre) {
 }
 
 
-//-----------------------------------------------------
+//-----------------------------------------------------Arguments Optional
+function addTogether(a, b) {
+  if (Number.isFinite(a)) {
+    if (!b) {
+      return function(c) {
+        if (Number.isFinite(c)) {
+          return a + c;
+        }
+      };
+    }
+    else if (Number.isFinite(b)) {
+      return a + b;
+    }
+  }
+}
 
 
 

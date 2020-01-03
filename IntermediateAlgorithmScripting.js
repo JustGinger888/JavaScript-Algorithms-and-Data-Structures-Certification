@@ -109,15 +109,77 @@ function fearNotLetter(str) {
 
 
 //-----------------------------------------------------Sorted Union
+function uniteUnique(arr1, arr2, arr3) {
+  var output = [];
+  var idx;
+
+  for (var i = 0; i < arguments.length; i++) {
+    var arrayArguments = arguments[i];
+
+    for (var j = 0; j < arrayArguments.length; j++) {
+      idx = arrayArguments[j];
+
+      if (output.indexOf(idx) < 0) {
+        output.push(idx);
+      }
+    }
+  }
+
+  return output;
+}
 
 
+//-----------------------------------------------------Convert HTML Entities
+function convertHTML(str) {
+  var input = str.split("");
+  var output = switchCase(input);
+  return output;
+}
 
-//-----------------------------------------------------
+function switchCase(inp){
+  for (var i = 0; i < inp.length; i++) {
+    switch (inp[i]) {
+      case "<":
+        inp[i] = "&lt;";
+        break;
+      case "&":
+        inp[i] = "&amp;";
+        break;
+      case ">":
+        inp[i] = "&gt;";
+        break;
+      case '"':
+        inp[i] = "&quot;";
+        break;
+      case "'":
+        inp[i] = "&apos;";
+        break;
+    }
+  }
+
+  inp = inp.join("");
+  return inp;
+}
 
 
+//-----------------------------------------------------Sum All Odd Fibonacci Numbers
+function sumFibs(num) {
+  var previous = 0;
+  var current = 1;
+  var result = 0;
+  
+  while (current <= num) {
+    
+    if (current % 2 !== 0) {
+      result += current;
+    }
 
-//-----------------------------------------------------
+    current += previous;
+    previous = current - previous;
+  }
 
+  return result;
+}
 
 
 //-----------------------------------------------------

@@ -92,7 +92,7 @@ function search(char, pair) {
       break;
   }
 }
-
+ 
 
 //-----------------------------------------------------Missing letters
 function fearNotLetter(str) {

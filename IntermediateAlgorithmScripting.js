@@ -226,8 +226,23 @@ function smallestCommons(arr) {
 }
 
 
-//-----------------------------------------------------
+//-----------------------------------------------------Steamroller
+function steamrollArray(arr) {
+  var mrg = [];
 
+  var merge = function(arg) {
+    if (!Array.isArray(arg)) {
+      mrg.push(arg);
+    } else {
+      for (var a in arg) {
+        merge(arg[a]);
+      }
+    }
+  };
+
+  arr.forEach(merge);
+  return mrg;
+}
 
 
 //-----------------------------------------------------
